@@ -1,0 +1,4 @@
+/* Ancres : éviter que le titre soit sous la navbar */
+.scroll-section {
+  scroll-margin-top: 120px;
+}
