@@ -8,7 +8,7 @@
         <span><i class="fas fa-clock mr-1.5 inline-block w-4 text-center"></i> Lun – Dim : 06h – 21h</span>
       </div>
       <div class="flex items-center gap-3">
-        
+         
       </div>
     </div>
   </div>
@@ -23,7 +23,7 @@
       </a>
 
       <input type="checkbox" id="nav-toggle" class="peer sr-only" aria-hidden="true">
-      <label for="nav-toggle" class="md:hidden flex flex-col justify-center w-10 h-10 cursor-pointer p-2 text-white hover:text-kp-gold transition-colors" aria-label="Menu">
+      <label [ngClass]="isScrolled ? 'text-white' : 'text-blue-500'" for="nav-toggle" class="md:hidden flex flex-col justify-center w-10 h-10 cursor-pointer p-2  hover:text-kp-gold transition-colors" aria-label="Menu">
         <span class="block w-6 h-0.5 bg-current rounded mb-1.5"></span>
         <span class="block w-6 h-0.5 bg-current rounded mb-1.5"></span>
         <span class="block w-6 h-0.5 bg-current rounded"></span>
@@ -31,12 +31,12 @@
 
       <nav class="hidden w-full order-last basis-full peer-checked:flex lg:order-none md:basis-auto lg:flex md:w-auto md:flex-1">
         <ul class="flex flex-col gap-1 py-4 md:py-0 md:flex-row md:flex-1 md:items-center md:justify-center md:gap-8">
-          <li><a href="#accueil" class="block py-2 px-3 text-white hover:text-kp-gold rounded transition-colors md:py-1">Accueil</a></li>
-          <li><a href="#apropos" class="block py-2 px-3 text-white hover:text-kp-gold rounded transition-colors md:py-1">À propos</a></li>
-          <li><a href="#services" class="block py-2 px-3 text-white hover:text-kp-gold rounded transition-colors md:py-1">Services</a></li>
-          <li><a href="#initiatives" class="block py-2 px-3 text-white hover:text-kp-gold rounded transition-colors md:py-1">Initiatives</a></li>
-          <li><a href="#engagements" class="block py-2 px-3 text-white hover:text-kp-gold rounded transition-colors md:py-1">Engagements</a></li>
-          <li><a href="#contact" class="block py-2 px-3 text-white hover:text-kp-gold rounded transition-colors md:py-1">Contact</a></li>
+          <li><a href="#accueil" (click)="closeNavigation()" [ngClass]="isScrolled ? 'text-white' : 'text-gray-100'" class="block py-2 px-3  hover:text-kp-gold rounded transition-colors md:py-1">Accueil</a></li>
+          <li><a href="#apropos" (click)="closeNavigation()" [ngClass]="isScrolled ? 'text-white' : 'text-gray-100'" class="block py-2 px-3  hover:text-kp-gold rounded transition-colors md:py-1">À propos</a></li>
+          <li><a href="#services" (click)="closeNavigation()" [ngClass]="isScrolled ? 'text-white' : 'text-gray-100'" class="block py-2 px-3  hover:text-kp-gold rounded transition-colors md:py-1">Services</a></li>
+          <li><a href="#initiatives" (click)="closeNavigation()" [ngClass]="isScrolled ? 'text-white' : 'text-gray-100'" class="block py-2 px-3  hover:text-kp-gold rounded transition-colors md:py-1">Initiatives</a></li>
+          <li><a href="#engagements" (click)="closeNavigation()" [ngClass]="isScrolled ? 'text-white' : 'text-gray-100'" class="block py-2 px-3  hover:text-kp-gold rounded transition-colors md:py-1">Engagements</a></li>
+          <li><a href="#contact" (click)="closeNavigation()"  [ngClass]="isScrolled ? 'text-white' : 'text-gray-100'" class="block py-2 px-3  hover:text-kp-gold rounded transition-colors md:py-1">Contact</a></li>
           <li class="md:hidden mt-2">
             <a href="#contact" class="inline-block py-2.5 px-5 text-sm font-semibold text-white bg-green-500 hover:bg-green-600 rounded transition-colors">Demander un enlèvement</a>
           </li>

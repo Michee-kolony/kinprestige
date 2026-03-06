@@ -1,4 +1,4 @@
-import { ChangeDetectorRef, Component } from '@angular/core';
+import { ChangeDetectorRef, Component, HostListener } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -23,7 +23,32 @@ export class AppComponent {
   private readonly DURATION = 1600;
   private readonly TARGETS = { about: 24, s1: 24, s2: 9, s3: 520, s4: 24 };
 
+  isScrolled = false;
+  showScrollToTop = false;
+
   constructor(private cdr: ChangeDetectorRef) {}
+
+  @HostListener('window:scroll', [])
+  onScroll(): void {
+    const scrollPosition = window.scrollY;
+    this.isScrolled = scrollPosition > 50;
+    this.showScrollToTop = scrollPosition > 300;
+    this.cdr.markForCheck();
+  }
+
+  scrollToTop(): void {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  }
+
+  closeNavigation(): void {
+    const navToggle = document.getElementById('nav-toggle') as HTMLInputElement;
+    if (navToggle) {
+      navToggle.checked = false;
+    }
+  }
 
   onSubmitContact(event: Event): void {
     event.preventDefault();
