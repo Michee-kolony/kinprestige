@@ -1,4 +1,4 @@
-import { AfterViewInit, Component } from '@angular/core';
+import { AfterViewInit, Component, OnInit } from '@angular/core';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
@@ -9,7 +9,7 @@ gsap.registerPlugin(ScrollTrigger); // Important pour activer ScrollTrigger
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css'] // ⬅ pluriel obligatoire
 })
-export class HomeComponent implements AfterViewInit {
+export class HomeComponent implements OnInit, AfterViewInit {
 
   ngAfterViewInit(): void {
     // Animate stat1
@@ -42,4 +42,27 @@ export class HomeComponent implements AfterViewInit {
       }
     );
   }
+
+  showCookieModal = false;
+
+ngOnInit() {
+
+  const consent = localStorage.getItem('cookieConsent');
+
+  if (!consent) {
+    this.showCookieModal = true;
+  }
+
+}
+
+acceptCookies() {
+  localStorage.setItem('cookieConsent', 'accepted');
+  this.showCookieModal = false;
+}
+
+refuseCookies() {
+  localStorage.setItem('cookieConsent', 'refused');
+  this.showCookieModal = false;
+}
+
 }
