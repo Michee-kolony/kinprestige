@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { KinprestigeComponent } from './client/kinprestige/kinprestige.component';
 import { HomeComponent } from './client/home/home.component';
 import { ServicesComponent } from './client/services/services.component';
+import { ContactComponent } from './client/contact/contact.component';
 
 const routes: Routes = [
   {path: "", redirectTo:"/kinprestige", pathMatch:"full"},
@@ -10,7 +11,8 @@ const routes: Routes = [
     children: [
       {path: '', redirectTo:"home", pathMatch:"full"},
       {path:'home', component: HomeComponent},
-      {path:'services', component : ServicesComponent}
+      {path:'services', component : ServicesComponent},
+      {path:'contact', component: ContactComponent}
     ]
    }
 ];
