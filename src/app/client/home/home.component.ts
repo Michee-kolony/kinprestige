@@ -95,14 +95,12 @@ animateTexts() {
 animateImage() {
 
   gsap.from(".service-image", {
-    y: 100,
     opacity: 0,
-    scale: 0.9,
-    duration: 1.2,
-    ease: "power3.out",
+    duration: 1.5,
+    ease: "power2.out",
     scrollTrigger: {
       trigger: ".service-image",
-      start: "top 85%", // animation démarre quand l'image arrive à 85% de l'écran
+      start: "top 85%",
       toggleActions: "play none none none"
     }
   });
