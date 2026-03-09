@@ -21,7 +21,10 @@ export class HomeComponent implements OnInit, AfterViewInit {
     // Attend la fin du rendu du DOM pour les textes
   setTimeout(() => {
     this.animateTexts();
+    this.animateImage();
   }, 0);
+
+  
   }
 
   animateNumber(selector: string, endValue: number, duration: number) {
@@ -85,6 +88,23 @@ animateTexts() {
       }
     });
 
+  });
+
+}
+
+animateImage() {
+
+  gsap.from(".service-image", {
+    y: 100,
+    opacity: 0,
+    scale: 0.9,
+    duration: 1.2,
+    ease: "power3.out",
+    scrollTrigger: {
+      trigger: ".service-image",
+      start: "top 85%", // animation démarre quand l'image arrive à 85% de l'écran
+      toggleActions: "play none none none"
+    }
   });
 
 }
