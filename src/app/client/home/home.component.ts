@@ -43,26 +43,8 @@ export class HomeComponent implements OnInit, AfterViewInit {
     );
   }
 
-  showCookieModal = false;
-
-ngOnInit() {
-
-  const consent = localStorage.getItem('cookieConsent');
-
-  if (!consent) {
-    this.showCookieModal = true;
-  }
-
-}
-
-acceptCookies() {
-  localStorage.setItem('cookieConsent', 'accepted');
-  this.showCookieModal = false;
-}
-
-refuseCookies() {
-  localStorage.setItem('cookieConsent', 'refused');
-  this.showCookieModal = false;
+ngOnInit(): void {
+  
 }
 
 }
