@@ -1,4 +1,4 @@
-import { Component, AfterViewInit } from '@angular/core';
+import { Component, AfterViewInit, OnInit } from '@angular/core';
 import Splide from '@splidejs/splide';
 
 @Component({
@@ -6,7 +6,13 @@ import Splide from '@splidejs/splide';
   templateUrl: './services.component.html',
   styleUrls: []
 })
-export class ServicesComponent implements AfterViewInit {
+export class ServicesComponent implements AfterViewInit, OnInit {
+
+
+  ngOnInit(): void {
+    // Scroll automatique en haut de la page
+   window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
 
   ngAfterViewInit(): void {
     // Initialisation du carrousel Splide avec animation verticale

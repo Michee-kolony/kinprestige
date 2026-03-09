@@ -44,7 +44,8 @@ export class HomeComponent implements OnInit, AfterViewInit {
   }
 
 ngOnInit(): void {
-  
+   // Scroll automatique en haut de la page
+   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
 }
