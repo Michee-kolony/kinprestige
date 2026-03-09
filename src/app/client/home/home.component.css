@@ -169,3 +169,8 @@
     }
   }
 
+.partner-marquee {
+  display: flex;
+  gap: 2rem;
+  will-change: transform;
+}

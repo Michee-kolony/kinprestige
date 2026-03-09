@@ -23,6 +23,8 @@ export class HomeComponent implements OnInit, AfterViewInit {
     this.animateTexts();
     this.animateImage();
     this.animateBookImage();
+     this.animatePartnersSnake();
+    
   }, 0);
 
   
@@ -120,6 +122,35 @@ animateBookImage() {
       start: "top 85%",
       toggleActions: "play none none none"
     }
+  });
+
+}
+
+animatePartnersSnake() {
+
+  const marquee = document.querySelector(".partner-marquee") as HTMLElement;
+  const logos = marquee.querySelectorAll("img");
+
+  const width = marquee.scrollWidth / 2; // moitié car on duplique
+
+  // animation horizontale continue
+  gsap.to(marquee, {
+    x: -width,
+    duration: 25,
+    ease: "linear",
+    repeat: -1
+  });
+
+  // animation zig-zag sur Y
+  logos.forEach((logo, i) => {
+    gsap.to(logo, {
+      y: "+=20",       // amplitude du zig-zag
+      duration: 1 + Math.random(), // légère variation de vitesse
+      ease: "sine.inOut",
+      yoyo: true,
+      repeat: -1,
+      delay: i * 0.1 // décalage pour effet serpent
+    });
   });
 
 }
