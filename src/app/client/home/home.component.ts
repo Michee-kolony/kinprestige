@@ -22,6 +22,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
   setTimeout(() => {
     this.animateTexts();
     this.animateImage();
+    this.animateBookImage();
   }, 0);
 
   
@@ -100,6 +101,22 @@ animateImage() {
     ease: "power2.out",
     scrollTrigger: {
       trigger: ".service-image",
+      start: "top 85%",
+      toggleActions: "play none none none"
+    }
+  });
+
+}
+
+animateBookImage() {
+
+  gsap.from(".book-image", {
+    rotateY: -90,
+    opacity: 0,
+    duration: 1.5,
+    ease: "power3.out",
+    scrollTrigger: {
+      trigger: ".book-image",
       start: "top 85%",
       toggleActions: "play none none none"
     }
