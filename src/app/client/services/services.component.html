@@ -1,215 +1,300 @@
-<section class="bg-gray-50 py-24 lg:pb-[15%] pb-[35%]">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6">
+<section class="w-full h-screen overflow-hidden relative mt-4">
+  <!-- CAROUSEL PRINCIPAL -->
+  <div id="services-splide" class="splide w-full h-full">
+    <div class="splide__track h-full">
+      <ul class="splide__list h-full">
+        
+        <!-- SERVICE 1 -->
+        <li class="splide__slide w-full h-screen relative overflow-hidden">
+          <div class="w-full h-full bg-cover bg-center bg-no-repeat relative flex items-center justify-center"
+               style="background-image: url('images/2.jpeg')">
+            
+            <!-- Overlay glass flou -->
+            <div class="absolute inset-0 bg-white/10 backdrop-blur-md z-10 transition-all duration-500 group-hover:backdrop-blur group-hover:bg-white/15"></div>
+            
+            <!-- Wrapper du contenu -->
+            <div class="relative z-20 max-w-7xl w-[90%] mx-auto flex flex-col md:flex-row items-center gap-6 md:gap-12 p-6 md:p-8 
+                        bg-white/20 backdrop-blur-xl rounded-3xl border border-white/30 shadow-2xl
+                        transform transition-all duration-600 hover:-translate-y-1 hover:shadow-3xl">
+              
+              <!-- Image ronde du service -->
+              <div class="flex-none w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 lg:w-56 lg:h-56 
+                          rounded-full overflow-hidden shadow-xl border-4 border-white/60
+                          transition-all duration-400 hover:border-[#1a1b50] hover:scale-105 hover:shadow-2xl hover:shadow-[#1a1b50]/30">
+                <img src="images/motor.jpeg" 
+                     alt="Collecte des déchets"
+                     class="w-full h-full object-cover transition-transform duration-600 hover:scale-110">
+              </div>
+              
+              <!-- Détails du service -->
+              <div class="flex-1 text-white drop-shadow-md">
+                <span class="inline-block px-4 py-2 bg-white/25 backdrop-blur rounded-full text-sm font-semibold tracking-wider mb-4 
+                           border border-white/30 text-white">
+                  Service 01
+                </span>
+                
+                <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 leading-tight text-white">
+                  Collecte et évacuation professionnelle des déchets
+                </h2>
+                
+                <p class="text-sm sm:text-base md:text-lg mb-6 text-white">
+                  Nous assurons la pré-collecte, la collecte et le transport sécurisé
+                  des déchets ménagers et assimilés produits par les entreprises,
+                  institutions et organisations.
+                </p>
+                
+                <div class="flex flex-wrap gap-2 md:gap-3">
+                  <span class="px-3 py-1.5 md:px-4 md:py-2 bg-[#1a1b50]/20 backdrop-blur rounded-full 
+                               text-xs md:text-sm font-medium border border-white/20 text-white">
+                    ✓ Sacs biodégradables
+                  </span>
+                  <span class="px-3 py-1.5 md:px-4 md:py-2 bg-[#1a1b50]/20 backdrop-blur rounded-full 
+                               text-xs md:text-sm font-medium border border-white/20 text-white">
+                    ✓ Tri à la source
+                  </span>
+                  <span class="px-3 py-1.5 md:px-4 md:py-2 bg-[#1a1b50]/20 backdrop-blur rounded-full 
+                               text-xs md:text-sm font-medium border border-white/20 text-white">
+                    ✓ Traçabilité
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
 
-    <!-- En-tête avec design amélioré -->
-    <div class="text-center mb-16">
-      <span class="text-green-600 font-semibold text-sm uppercase tracking-wider">Ce que nous faisons</span>
-      <h2 class="text-4xl md:text-5xl font-bold text-[#1a1b50] mt-4 mb-6">
-        Nos Services
-      </h2>
-      <p class="text-gray-600 text-lg max-w-3xl mx-auto">
-        Nous proposons des solutions professionnelles pour maintenir un environnement propre,
-        sain et durable pour les entreprises, institutions et particuliers.
-      </p>
+        <!-- SERVICE 2 -->
+        <li class="splide__slide w-full h-screen relative overflow-hidden">
+          <div class="w-full h-full bg-cover bg-center bg-no-repeat relative flex items-center justify-center"
+               style="background-image: url('images/WhatsApp Image 2026-03-09 at 14.53.23.jpeg')">
+            
+            <div class="absolute inset-0 bg-white/10 backdrop-blur-md z-10 transition-all duration-500"></div>
+            
+            <div class="relative z-20 max-w-7xl w-[90%] mx-auto flex flex-col md:flex-row items-center gap-6 md:gap-12 p-6 md:p-8 
+                        bg-white/20 backdrop-blur-xl rounded-3xl border border-white/30 shadow-2xl
+                        transform transition-all duration-600 hover:-translate-y-1 hover:shadow-3xl">
+              
+              <div class="flex-none w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 lg:w-56 lg:h-56 
+                          rounded-full overflow-hidden shadow-xl border-4 border-white/60
+                          transition-all duration-400 hover:border-[#1a1b50] hover:scale-105 hover:shadow-2xl hover:shadow-[#1a1b50]/30">
+                <img src="images/nottoyage.jpeg" 
+                     alt="Nettoyage professionnel"
+                     class="w-full h-full object-cover transition-transform duration-600 hover:scale-110">
+              </div>
+              
+              <div class="flex-1 text-white drop-shadow-md">
+                <span class="inline-block px-4 py-2 bg-white/25 backdrop-blur rounded-full text-sm font-semibold tracking-wider mb-4 
+                           border border-white/30 text-white">
+                  Service 02
+                </span>
+                
+                <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 leading-tight text-white">
+                  Nettoyage professionnel des bâtiments
+                </h2>
+                
+                <p class="text-sm sm:text-base md:text-lg mb-6 text-white">
+                  KIN PRESTIGE PROPRETÉ propose des services professionnels
+                  d'entretien et de nettoyage des infrastructures afin de garantir
+                  un environnement de travail propre et sain.
+                </p>
+                
+                <div class="flex flex-wrap gap-2 md:gap-3">
+                  <span class="px-3 py-1.5 md:px-4 md:py-2 bg-[#1a1b50]/20 backdrop-blur rounded-full 
+                               text-xs md:text-sm font-medium border border-white/20 text-white">
+                    ✓ Bureaux
+                  </span>
+                  <span class="px-3 py-1.5 md:px-4 md:py-2 bg-[#1a1b50]/20 backdrop-blur rounded-full 
+                               text-xs md:text-sm font-medium border border-white/20 text-white">
+                    ✓ Sites industriels
+                  </span>
+                  <span class="px-3 py-1.5 md:px-4 md:py-2 bg-[#1a1b50]/20 backdrop-blur rounded-full 
+                               text-xs md:text-sm font-medium border border-white/20 text-white">
+                    ✓ Espaces communs
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <!-- SERVICE 3 -->
+        <li class="splide__slide w-full h-screen relative overflow-hidden">
+          <div class="w-full h-full bg-cover bg-center bg-no-repeat relative flex items-center justify-center"
+               style="background-image: url('images/WhatsApp Image 2026-03-09 at 14.53.24.jpeg')">
+            
+            <div class="absolute inset-0 bg-white/10 backdrop-blur-md z-10 transition-all duration-500"></div>
+            
+            <div class="relative z-20 max-w-7xl w-[90%] mx-auto flex flex-col md:flex-row items-center gap-6 md:gap-12 p-6 md:p-8 
+                        bg-white/20 backdrop-blur-xl rounded-3xl border border-white/30 shadow-2xl
+                        transform transition-all duration-600 hover:-translate-y-1 hover:shadow-3xl">
+              
+              <div class="flex-none w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 lg:w-56 lg:h-56 
+                          rounded-full overflow-hidden shadow-xl border-4 border-white/60
+                          transition-all duration-400 hover:border-[#1a1b50] hover:scale-105 hover:shadow-2xl hover:shadow-[#1a1b50]/30">
+                <img src="images/WhatsApp Image 2026-03-09 at 14.53.24.jpeg" 
+                     alt="Services sanitaires"
+                     class="w-full h-full object-cover transition-transform duration-600 hover:scale-110">
+              </div>
+              
+              <div class="flex-1 text-white drop-shadow-md">
+                <span class="inline-block px-4 py-2 bg-white/25 backdrop-blur rounded-full text-sm font-semibold tracking-wider mb-4 
+                           border border-white/30 text-white">
+                  Service 03
+                </span>
+                
+                <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 leading-tight text-white">
+                  Services sanitaires spécialisés (3D)
+                </h2>
+                
+                <p class="text-sm sm:text-base md:text-lg mb-6 text-white">
+                  Pour assurer un environnement sanitaire parfaitement maîtrisé,
+                  nous réalisons des interventions professionnelles de
+                  désinsectisation, dératisation et désinfection.
+                </p>
+                
+                <div class="flex flex-wrap gap-2 md:gap-3">
+                  <span class="px-3 py-1.5 md:px-4 md:py-2 bg-[#1a1b50]/20 backdrop-blur rounded-full 
+                               text-xs md:text-sm font-medium border border-white/20 text-white">
+                    ✓ Désinsectisation
+                  </span>
+                  <span class="px-3 py-1.5 md:px-4 md:py-2 bg-[#1a1b50]/20 backdrop-blur rounded-full 
+                               text-xs md:text-sm font-medium border border-white/20 text-white">
+                    ✓ Dératisation
+                  </span>
+                  <span class="px-3 py-1.5 md:px-4 md:py-2 bg-[#1a1b50]/20 backdrop-blur rounded-full 
+                               text-xs md:text-sm font-medium border border-white/20 text-white">
+                    ✓ Désinfection
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <!-- SERVICE 4 -->
+        <li class="splide__slide w-full h-screen relative overflow-hidden">
+          <div class="w-full h-full bg-cover bg-center bg-no-repeat relative flex items-center justify-center"
+               style="background-image: url('images/WhatsApp Image 2026-03-09 at 14.53.23.jpeg')">
+            
+            <div class="absolute inset-0 bg-white/10 backdrop-blur-md z-10 transition-all duration-500"></div>
+            
+            <div class="relative z-20 max-w-7xl w-[90%] mx-auto flex flex-col md:flex-row items-center gap-6 md:gap-12 p-6 md:p-8 
+                        bg-white/20 backdrop-blur-xl rounded-3xl border border-white/30 shadow-2xl
+                        transform transition-all duration-600 hover:-translate-y-1 hover:shadow-3xl">
+              
+              <div class="flex-none w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 lg:w-56 lg:h-56 
+                          rounded-full overflow-hidden shadow-xl border-4 border-white/60
+                          transition-all duration-400 hover:border-[#1a1b50] hover:scale-105 hover:shadow-2xl hover:shadow-[#1a1b50]/30">
+                <img src="images/WhatsApp Image 2026-03-09 at 14.53.23.jpeg" 
+                     alt="Déchets dangereux"
+                     class="w-full h-full object-cover transition-transform duration-600 hover:scale-110">
+              </div>
+              
+              <div class="flex-1 text-white drop-shadow-md">
+                <span class="inline-block px-4 py-2 bg-white/25 backdrop-blur rounded-full text-sm font-semibold tracking-wider mb-4 
+                           border border-white/30 text-white">
+                  Service 04
+                </span>
+                
+                <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 leading-tight text-white">
+                  Gestion des déchets dangereux et spéciaux
+                </h2>
+                
+                <p class="text-sm sm:text-base md:text-lg mb-6 text-gray-800">
+                  Certaines activités produisent des déchets nécessitant
+                  une prise en charge spécifique et réglementée.
+                </p>
+                
+                <div class="flex flex-wrap gap-2 md:gap-3">
+                  <span class="px-3 py-1.5 md:px-4 md:py-2 bg-[#1a1b50]/20 backdrop-blur rounded-full 
+                               text-xs md:text-sm font-medium border border-white/20 text-white">
+                    ✓ Huiles usagées
+                  </span>
+                  <span class="px-3 py-1.5 md:px-4 md:py-2 bg-[#1a1b50]/20 backdrop-blur rounded-full 
+                               text-xs md:text-sm font-medium border border-white/20 text-white">
+                    ✓ Déchets médicaux
+                  </span>
+                  <span class="px-3 py-1.5 md:px-4 md:py-2 bg-[#1a1b50]/20 backdrop-blur rounded-full 
+                               text-xs md:text-sm font-medium border border-white/20 text-white">
+                    ✓ E-waste
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <!-- SERVICE 5 -->
+        <li class="splide__slide w-full h-screen relative overflow-hidden">
+          <div class="w-full h-full bg-cover bg-center bg-no-repeat relative flex items-center justify-center"
+               style="background-image: url('images/WhatsApp Image 2026-03-09 at 14.53.24.jpeg')">
+            
+            <div class="absolute inset-0 bg-white/10 backdrop-blur-md z-10 transition-all duration-500"></div>
+            
+            <div class="relative z-20 max-w-7xl w-[90%] mx-auto flex flex-col md:flex-row items-center gap-6 md:gap-12 p-6 md:p-8 
+                        bg-white/20 backdrop-blur-xl rounded-3xl border border-white/30 shadow-2xl
+                        transform transition-all duration-600 hover:-translate-y-1 hover:shadow-3xl">
+              
+              <div class="flex-none w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 lg:w-56 lg:h-56 
+                          rounded-full overflow-hidden shadow-xl border-4 border-white/60
+                          transition-all duration-400 hover:border-[#1a1b50] hover:scale-105 hover:shadow-2xl hover:shadow-[#1a1b50]/30">
+                <img src="images/WhatsApp Image 2026-03-09 at 14.53.24.jpeg" 
+                     alt="Solutions environnementales"
+                     class="w-full h-full object-cover transition-transform duration-600 hover:scale-110">
+              </div>
+              
+              <div class="flex-1 text-white drop-shadow-md">
+                <span class="inline-block px-4 py-2 bg-white/25 backdrop-blur rounded-full text-sm font-semibold tracking-wider mb-4 
+                           border border-white/30 text-white">
+                  Service 05
+                </span>
+                
+                <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 leading-tight text-white">
+                  Solutions environnementales pour entreprises
+                </h2>
+                
+                <p class="text-sm sm:text-base md:text-lg mb-6 text-white">
+                  Nous accompagnons les entreprises dans la mise en place
+                  de solutions modernes de gestion environnementale.
+                </p>
+                
+                <div class="flex flex-wrap gap-2 md:gap-3">
+                  <span class="px-3 py-1.5 md:px-4 md:py-2 bg-[#1a1b50]/20 backdrop-blur rounded-full 
+                               text-xs md:text-sm font-medium border border-white/20 text-white">
+                    ✓ Tri à la source
+                  </span>
+                  <span class="px-3 py-1.5 md:px-4 md:py-2 bg-[#1a1b50]/20 backdrop-blur rounded-full 
+                               text-xs md:text-sm font-medium border border-white/20 text-white">
+                    ✓ Conformité ESG
+                  </span>
+                  <span class="px-3 py-1.5 md:px-4 md:py-2 bg-[#1a1b50]/20 backdrop-blur rounded-full 
+                               text-xs md:text-sm font-medium border border-white/20 text-white">
+                    ✓ Optimisation
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+
+      </ul>
     </div>
 
-    <!-- Grille des services avec photos -->
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    <!-- FLÈCHES DE NAVIGATION PERSONNALISÉES -->
+    <div class="splide__arrows flex flex-col gap-4">
+      <button class="splide__arrow splide__arrow--prev !bg-white/25 !backdrop-blur !border !border-white/30 
+      !w-12 !h-12 !rounded-full !opacity-80 hover:!opacity-100 hover:!scale-110 
+      !transition-all !duration-300 flex items-center justify-center">
+<span class="text-3xl leading-none text-white">←</span>
+</button>
 
-      <!-- Service 1 - Collecte des déchets -->
-      <div class="group relative bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
-        <div class="relative h-56 overflow-hidden">
-          <img src="https://images.unsplash.com/photo-1528323273322-d81458248d40?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-               alt="Collecte des déchets"
-               class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
-          <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
-          <div class="absolute bottom-4 left-4">
-            <div class="w-12 h-12 flex items-center justify-center bg-green-500 text-white rounded-xl">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 6h18M9 6v12m6-12v12M5 6l1-2h12l1 2"/>
-              </svg>
-            </div>
-          </div>
-        </div>
-        <div class="p-8">
-          <h3 class="text-2xl font-bold text-[#1a1b50] mb-3 group-hover:text-green-600 transition-colors">
-            Collecte des déchets
-          </h3>
-          <p class="text-gray-600 mb-4">
-            Nous assurons la collecte régulière des déchets pour les entreprises,
-            les institutions et les particuliers avec des équipements adaptés.
-          </p>
-          <a href="#" class="inline-flex items-center text-green-600 font-semibold group-hover:text-green-700">
-            En savoir plus 
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2 group-hover:translate-x-2 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-            </svg>
-          </a>
-        </div>
-      </div>
-
-      <!-- Service 2 - Nettoyage industriel -->
-      <div class="group relative bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
-        <div class="relative h-56 overflow-hidden">
-          <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-               alt="Nettoyage industriel"
-               class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
-          <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
-          <div class="absolute bottom-4 left-4">
-            <div class="w-12 h-12 flex items-center justify-center bg-green-500 text-white rounded-xl">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v-6h13M9 11l-4 4 4 4"/>
-              </svg>
-            </div>
-          </div>
-        </div>
-        <div class="p-8">
-          <h3 class="text-2xl font-bold text-[#1a1b50] mb-3 group-hover:text-green-600 transition-colors">
-            Nettoyage industriel
-          </h3>
-          <p class="text-gray-600 mb-4">
-            Nos équipes spécialisées interviennent pour le nettoyage industriel
-            et l'entretien des espaces professionnels.
-          </p>
-          <a href="#" class="inline-flex items-center text-green-600 font-semibold group-hover:text-green-700">
-            En savoir plus 
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2 group-hover:translate-x-2 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-            </svg>
-          </a>
-        </div>
-      </div>
-
-      <!-- Service 3 - Assainissement urbain -->
-      <div class="group relative bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
-        <div class="relative h-56 overflow-hidden">
-          <img src="https://images.unsplash.com/photo-1618477461853-cf6ed80faba5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-               alt="Assainissement urbain"
-               class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
-          <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
-          <div class="absolute bottom-4 left-4">
-            <div class="w-12 h-12 flex items-center justify-center bg-green-500 text-white rounded-xl">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-3 0-5 2-5 5s2 5 5 5 5-2 5-5-2-5-5-5z"/>
-              </svg>
-            </div>
-          </div>
-        </div>
-        <div class="p-8">
-          <h3 class="text-2xl font-bold text-[#1a1b50] mb-3 group-hover:text-green-600 transition-colors">
-            Assainissement urbain
-          </h3>
-          <p class="text-gray-600 mb-4">
-            Nous participons à l'amélioration de l'hygiène urbaine grâce à
-            des opérations d'assainissement dans les communes.
-          </p>
-          <a href="#" class="inline-flex items-center text-green-600 font-semibold group-hover:text-green-700">
-            En savoir plus 
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2 group-hover:translate-x-2 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-            </svg>
-          </a>
-        </div>
-      </div>
-
-      <!-- Service 4 - Tri et recyclage -->
-      <div class="group relative bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
-        <div class="relative h-56 overflow-hidden">
-          <img src="https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-               alt="Tri et recyclage"
-               class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
-          <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
-          <div class="absolute bottom-4 left-4">
-            <div class="w-12 h-12 flex items-center justify-center bg-green-500 text-white rounded-xl">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 2l4 8H8l4-8zM4 22h16"/>
-              </svg>
-            </div>
-          </div>
-        </div>
-        <div class="p-8">
-          <h3 class="text-2xl font-bold text-[#1a1b50] mb-3 group-hover:text-green-600 transition-colors">
-            Tri et recyclage
-          </h3>
-          <p class="text-gray-600 mb-4">
-            Nous encourageons le tri et la valorisation des déchets afin
-            de contribuer à un environnement durable.
-          </p>
-          <a href="#" class="inline-flex items-center text-green-600 font-semibold group-hover:text-green-700">
-            En savoir plus 
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2 group-hover:translate-x-2 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-            </svg>
-          </a>
-        </div>
-      </div>
-
-      <!-- Service 5 - Gestion des bacs -->
-      <div class="group relative bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
-        <div class="relative h-56 overflow-hidden">
-          <img src="https://images.unsplash.com/photo-1624397640221-5b564a8ce5ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-               alt="Gestion des bacs"
-               class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
-          <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
-          <div class="absolute bottom-4 left-4">
-            <div class="w-12 h-12 flex items-center justify-center bg-green-500 text-white rounded-xl">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M5 10l1 10h12l1-10"/>
-              </svg>
-            </div>
-          </div>
-        </div>
-        <div class="p-8">
-          <h3 class="text-2xl font-bold text-[#1a1b50] mb-3 group-hover:text-green-600 transition-colors">
-            Gestion des bacs
-          </h3>
-          <p class="text-gray-600 mb-4">
-            Mise à disposition et gestion de bacs à déchets adaptés
-            aux besoins des entreprises et des collectivités.
-          </p>
-          <a href="#" class="inline-flex items-center text-green-600 font-semibold group-hover:text-green-700">
-            En savoir plus 
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2 group-hover:translate-x-2 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-            </svg>
-          </a>
-        </div>
-      </div>
-
-      <!-- Service 6 - Intervention rapide -->
-      <div class="group relative bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
-        <div class="relative h-56 overflow-hidden">
-          <img src="https://images.unsplash.com/photo-1556911220-bff31c812dba?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-               alt="Intervention rapide"
-               class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
-          <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
-          <div class="absolute bottom-4 left-4">
-            <div class="w-12 h-12 flex items-center justify-center bg-green-500 text-white rounded-xl">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6l4 2"/>
-              </svg>
-            </div>
-          </div>
-        </div>
-        <div class="p-8">
-          <h3 class="text-2xl font-bold text-[#1a1b50] mb-3 group-hover:text-green-600 transition-colors">
-            Intervention rapide
-          </h3>
-          <p class="text-gray-600 mb-4">
-            Nos équipes interviennent rapidement pour répondre
-            aux besoins urgents de nettoyage et d'assainissement.
-          </p>
-          <a href="#" class="inline-flex items-center text-green-600 font-semibold group-hover:text-green-700">
-            En savoir plus 
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2 group-hover:translate-x-2 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-            </svg>
-          </a>
-        </div>
-      </div>
-
+<button class="splide__arrow splide__arrow--next !bg-white/25 !backdrop-blur !border !border-white/30 
+      !w-12 !h-12 !rounded-full !opacity-80 hover:!opacity-100 hover:!scale-110 
+      !transition-all !duration-300 flex items-center justify-center">
+<span class="text-3xl leading-none text-white">→</span>
+</button>
     </div>
 
-
+    <!-- PAGINATION (POINTS) -->
+    <div class="splide__pagination !bottom-8"></div>
   </div>
 </section>
