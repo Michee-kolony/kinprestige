@@ -18,21 +18,26 @@
           Accueil
           <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
         </a>
+        <a href="#" 
+        class="relative text-gray-700 hover:text-blue-600 transition-colors duration-200 group">
+         Qui sommes-nous ?
+       <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
+     </a>
         <a routerLink="/kinprestige/services"
            class="relative text-gray-700 hover:text-blue-600 transition-colors duration-200 group">
-          Services
+          Nos services
           <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
         </a>
-        <a routerLink="/kinprestige/pourquoi-choisir-kinprestige"
+      <a routerLink="/kinprestige/pourquoi-choisir-kinprestige"
         class="relative text-gray-700 hover:text-blue-600 transition-colors duration-200 group">
         Pourquoi nous choisir ?
        <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
      </a>
-        <a href="#" 
-           class="relative text-gray-700 hover:text-blue-600 transition-colors duration-200 group">
-          À propos
-          <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
-        </a>
+     <a 
+     class="relative text-gray-700 hover:text-blue-600 transition-colors duration-200 group">
+      Nos engagements
+    <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
+  </a>
       </div>
 
       <!-- Boutons Desktop avec animations -->
@@ -61,15 +66,18 @@
         <a routerLink="/kinprestige/home" 
            class="block text-gray-700 hover:text-blue-600 transition-colors duration-200 transform hover:translate-x-2"
            (click)="closeMenu()">Accueil</a>
+           <a href="#" 
+           class="block text-gray-700 hover:text-blue-600 transition-colors duration-200 transform hover:translate-x-2"
+           (click)="closeMenu()">Qui sommes-nous ?</a>
         <a routerLink="/kinprestige/services" 
            class="block text-gray-700 hover:text-blue-600 transition-colors duration-200 transform hover:translate-x-2"
-           (click)="closeMenu()">Services</a>
+           (click)="closeMenu()">Nos services</a>
            <a routerLink="/kinprestige/pourquoi-choisir-kinprestige" 
            class="block text-gray-700 hover:text-blue-600 transition-colors duration-200 transform hover:translate-x-2"
            (click)="closeMenu()">Pourquoi nous choisir ?</a>
-        <a href="#" 
+           <a  
            class="block text-gray-700 hover:text-blue-600 transition-colors duration-200 transform hover:translate-x-2"
-           (click)="closeMenu()">À propos</a>
+           (click)="closeMenu()">Nos engagements</a>
         
         <div class="pt-4 space-y-3">
           <button (click)="closeMenu()" routerLink="/kinprestige/contact" class="w-full px-4 py-2 text-white border bg-green-500 shadow-lg rounded-md transition-all duration-200">
