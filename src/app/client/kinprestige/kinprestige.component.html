@@ -42,3 +42,13 @@
     </div>
    </div>
 </div>
+
+
+<!-- Bouton retour en haut - modifié avec condition *ngIf -->
+<button 
+  *ngIf="showScrollButton"
+  (click)="scrollToTop()"
+  class="fixed bottom-6 right-6 bg-green-500 hover:bg-green-600 text-white w-14 h-14 rounded-full shadow-md transition-all duration-300 hover:shadow-lg flex items-center justify-center focus:outline-none focus:ring-4 focus:ring-green-300 z-50" 
+  aria-label="Retour en haut">
+  <i class="fa-solid fa-chevron-up text-xl"></i>
+</button>
