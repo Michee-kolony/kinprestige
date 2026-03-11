@@ -11,6 +11,8 @@ import { ServicesComponent } from './client/services/services.component';
 import { FooterComponent } from './client/footer/footer.component';
 import { ContactComponent } from './client/contact/contact.component';
 import { RaisonComponent } from './client/raison/raison.component';
+import { AboutComponent } from './client/about/about.component';
+import { EngagementComponent } from './client/engagement/engagement.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { RaisonComponent } from './client/raison/raison.component';
     ServicesComponent,
     FooterComponent,
     ContactComponent,
-    RaisonComponent
+    RaisonComponent,
+    AboutComponent,
+    EngagementComponent
   ],
   imports: [
     BrowserModule,

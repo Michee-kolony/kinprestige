@@ -5,6 +5,8 @@ import { HomeComponent } from './client/home/home.component';
 import { ServicesComponent } from './client/services/services.component';
 import { ContactComponent } from './client/contact/contact.component';
 import {RaisonComponent} from './client/raison/raison.component';
+import { AboutComponent } from './client/about/about.component';
+import { EngagementComponent } from './client/engagement/engagement.component';
 
 const routes: Routes = [
   {path: "", redirectTo:"/kinprestige", pathMatch:"full"},
@@ -14,7 +16,9 @@ const routes: Routes = [
       {path:'home', component: HomeComponent},
       {path:'services', component : ServicesComponent},
       {path:'contact', component: ContactComponent},
-      {path:'pourquoi-choisir-kinprestige', component: RaisonComponent}
+      {path:'pourquoi-choisir-kinprestige', component: RaisonComponent},
+      {path:'qui-sommes-nous', component: AboutComponent},
+      {path:'engagement', component: EngagementComponent}
     ]
    }
 ];

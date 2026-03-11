@@ -18,7 +18,7 @@
           Accueil
           <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
         </a>
-        <a href="#" 
+        <a routerLink="/kinprestige/qui-sommes-nous" 
         class="relative text-gray-700 hover:text-blue-600 transition-colors duration-200 group">
          Qui sommes-nous ?
        <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
@@ -33,7 +33,7 @@
         Pourquoi nous choisir ?
        <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
      </a>
-     <a 
+     <a  routerLink="/kinprestige/engagement"
      class="relative text-gray-700 hover:text-blue-600 transition-colors duration-200 group">
       Nos engagements
     <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
@@ -66,7 +66,7 @@
         <a routerLink="/kinprestige/home" 
            class="block text-gray-700 hover:text-blue-600 transition-colors duration-200 transform hover:translate-x-2"
            (click)="closeMenu()">Accueil</a>
-           <a href="#" 
+           <a routerLink="/kinprestige/qui-sommes-nous"
            class="block text-gray-700 hover:text-blue-600 transition-colors duration-200 transform hover:translate-x-2"
            (click)="closeMenu()">Qui sommes-nous ?</a>
         <a routerLink="/kinprestige/services" 
@@ -75,7 +75,8 @@
            <a routerLink="/kinprestige/pourquoi-choisir-kinprestige" 
            class="block text-gray-700 hover:text-blue-600 transition-colors duration-200 transform hover:translate-x-2"
            (click)="closeMenu()">Pourquoi nous choisir ?</a>
-           <a  
+           <a 
+           routerLink="/kinprestige/engagement" 
            class="block text-gray-700 hover:text-blue-600 transition-colors duration-200 transform hover:translate-x-2"
            (click)="closeMenu()">Nos engagements</a>
         
