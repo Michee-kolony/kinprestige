@@ -1,0 +1,158 @@
+import { AfterViewInit, Component, OnInit } from '@angular/core';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+gsap.registerPlugin(ScrollTrigger); // Important pour activer ScrollTrigger
+
+@Component({
+  selector: 'app-home',
+  templateUrl: './home.component.html',
+  styleUrls: ['./home.component.css'] // ⬅ pluriel obligatoire
+})
+export class HomeComponent implements OnInit, AfterViewInit {
+
+  ngAfterViewInit(): void {
+    // Animate stat1
+    this.animateNumber('#stat1', 6, 2); // 9000 en 2 secondes
+    this.animateNumber('#stat2', 95, 2);
+    this.animateNumber('#stat3', 8, 2);
+    this.animateNumber('#stat4', 24, 2);
+
+    // Attend la fin du rendu du DOM pour les textes
+  setTimeout(() => {
+    this.animateTexts();
+    this.animateImage();
+    this.animateBookImage();
+     this.animatePartnersSnake();
+    
+  }, 0);
+
+  
+  }
+
+  animateNumber(selector: string, endValue: number, duration: number) {
+    const element = document.querySelector(selector) as HTMLElement; // ⬅ cast en HTMLElement
+    if (!element) return;
+
+    gsap.fromTo(
+      element,
+      { innerText: '0' }, // gsap fonctionne mieux avec string pour innerText
+      {
+        innerText: endValue.toString(),
+        duration: duration,
+        scrollTrigger: {
+          trigger: element,
+          start: "top 80%", // déclenche quand l'élément est visible à 80% du viewport
+          toggleActions: "play none none none",
+        },
+        snap: { innerText: 1 }, // pour nombres entiers
+        ease: "power1.out",
+        onUpdate: function () {
+          element.innerText = Math.floor(Number(element.innerText)).toLocaleString();
+        }
+      }
+    );
+  }
+
+ngOnInit(): void {
+   // Scroll automatique en haut de la page
+   window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+animateTexts() {
+
+  const elements = document.querySelectorAll(".animate-text");
+
+  elements.forEach((el: any) => {
+
+    const text = el.innerText;
+    el.innerHTML = "";
+
+    // transformer chaque lettre en span
+    text.split("").forEach((letter: string) => {
+      const span = document.createElement("span");
+      span.innerText = letter;
+      span.style.opacity = "0";
+      el.appendChild(span);
+    });
+
+    const letters = el.querySelectorAll("span");
+
+    // animation typewriting déclenchée au scroll
+    gsap.to(letters, {
+      opacity: 1,
+      duration: 0.05,
+      stagger: 0.05,
+      ease: "none",
+      scrollTrigger: {
+        trigger: el,
+        start: "top 80%", // quand l'élément arrive à 80% de l'écran
+        toggleActions: "play none none none"
+      }
+    });
+
+  });
+
+}
+
+animateImage() {
+
+  gsap.from(".service-image", {
+    opacity: 0,
+    duration: 1.5,
+    ease: "power2.out",
+    scrollTrigger: {
+      trigger: ".service-image",
+      start: "top 85%",
+      toggleActions: "play none none none"
+    }
+  });
+
+}
+
+animateBookImage() {
+
+  gsap.from(".book-image", {
+    rotateY: -90,
+    opacity: 0,
+    duration: 1.5,
+    ease: "power3.out",
+    scrollTrigger: {
+      trigger: ".book-image",
+      start: "top 85%",
+      toggleActions: "play none none none"
+    }
+  });
+
+}
+
+animatePartnersSnake() {
+
+  const marquee = document.querySelector(".partner-marquee") as HTMLElement;
+  const logos = marquee.querySelectorAll("img");
+
+  const width = marquee.scrollWidth / 2; // moitié car on duplique
+
+  // animation horizontale continue
+  gsap.to(marquee, {
+    x: -width,
+    duration: 25,
+    ease: "linear",
+    repeat: -1
+  });
+
+  // animation zig-zag sur Y
+  logos.forEach((logo, i) => {
+    gsap.to(logo, {
+      y: "+=20",       // amplitude du zig-zag
+      duration: 1 + Math.random(), // légère variation de vitesse
+      ease: "sine.inOut",
+      yoyo: true,
+      repeat: -1,
+      delay: i * 0.1 // décalage pour effet serpent
+    });
+  });
+
+}
+
+}

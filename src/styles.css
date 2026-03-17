@@ -1,0 +1,51 @@
+/* You can add global styles to this file, and also import other style files */
+/* tailwind css v4.x */
+@import "tailwindcss-animated";
+
+*{
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+}
+
+:root {
+  --kp-black: #0a0a0a;
+  --kp-black-soft: #1a1a1a;
+  --kp-green: #1a7f37;
+  --kp-green-light: #22a04a;
+  --kp-green-dark: #0f5c28;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: #1a1a1a;
+}
+
+/* Boutons et liens verts (marque) */
+.btn-kp {
+  background-color: var(--kp-green);
+  border-color: var(--kp-green);
+  color: #fff;
+}
+.btn-kp:hover {
+  background-color: var(--kp-green-dark);
+  border-color: var(--kp-green-dark);
+  color: #fff;
+}
+
+.text-kp { color: var(--kp-green) !important; }
+.bg-kp { background-color: var(--kp-green) !important; }
+.border-kp { border-color: var(--kp-green) !important; }
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+
+
