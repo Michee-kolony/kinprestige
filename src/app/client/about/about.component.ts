@@ -1,6 +1,7 @@
 import { AfterViewInit, Component, OnInit } from '@angular/core';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { Title} from '@angular/platform-browser'; 
 
 gsap.registerPlugin(ScrollTrigger); // Important pour activer ScrollTrigger
 
@@ -11,6 +12,8 @@ gsap.registerPlugin(ScrollTrigger); // Important pour activer ScrollTrigger
 })
 export class AboutComponent implements AfterViewInit, OnInit {
 
+
+constructor(private titleService: Title){}
 
 ngAfterViewInit(): void {
     
@@ -28,6 +31,7 @@ ngAfterViewInit(): void {
 }
 
 ngOnInit(): void {
+    this.titleService.setTitle("À propos | Kinprestige Kinshasa");
    // Scroll automatique en haut de la page
    window.scrollTo({ top: 0, behavior: 'smooth' });
 }

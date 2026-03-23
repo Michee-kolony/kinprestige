@@ -1,5 +1,7 @@
 import { Component, AfterViewInit, OnInit } from '@angular/core';
 import Splide from '@splidejs/splide';
+import { Title } from '@angular/platform-browser';
+
 
 @Component({
   selector: 'app-services',
@@ -9,7 +11,10 @@ import Splide from '@splidejs/splide';
 export class ServicesComponent implements AfterViewInit, OnInit {
 
 
+constructor(private title: Title){}
+
   ngOnInit(): void {
+     this.title.setTitle("Nos services");
     // Scroll automatique en haut de la page
    window.scrollTo({ top: 0, behavior: 'smooth' });
   }

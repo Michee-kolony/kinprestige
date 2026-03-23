@@ -1,6 +1,7 @@
 import { AfterViewInit, Component, OnInit } from '@angular/core';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { Title} from '@angular/platform-browser'; 
 
 @Component({
   selector: 'app-raison',
@@ -9,11 +10,17 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 })
 export class RaisonComponent implements OnInit, AfterViewInit {
 
+
+
+  constructor(private title : Title){}
+
+
   ngAfterViewInit(): void {
      this.animateTexts();
   }
 
   ngOnInit(): void {
+    this.title.setTitle('Pourquoi nous choisir');
     // Scroll automatique en haut de la page
    window.scrollTo({ top: 0, behavior: 'smooth' });
   }

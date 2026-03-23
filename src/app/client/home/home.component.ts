@@ -1,6 +1,7 @@
 import { AfterViewInit, Component, OnInit } from '@angular/core';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { Title} from '@angular/platform-browser'; 
 
 gsap.registerPlugin(ScrollTrigger); // Important pour activer ScrollTrigger
 
@@ -10,6 +11,9 @@ gsap.registerPlugin(ScrollTrigger); // Important pour activer ScrollTrigger
   styleUrls: ['./home.component.css'] // ⬅ pluriel obligatoire
 })
 export class HomeComponent implements OnInit, AfterViewInit {
+
+
+  constructor(private title : Title){}
 
   ngAfterViewInit(): void {
     // Animate stat1
@@ -55,6 +59,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
   }
 
 ngOnInit(): void {
+   this.title.setTitle("Accueil");
    // Scroll automatique en haut de la page
    window.scrollTo({ top: 0, behavior: 'smooth' });
 }
